@@ -1,0 +1,16 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      { "from": "Taraxacum_officinale", "to": "Taraxacum officinale" }
+    ],
+    "pages": {
+      "10783290": {
+        "pageid": 10783290,
+        "ns": 0,
+        "title": "Taraxacum officinale",
+        "extract": "Taraxacum officinale, the dandelion or common dandelion, is a flowering herbaceous perennial plant of the dandelion genus in the family Asteraceae (syn. Compositae). The common dandelion is well known for its yellow flower heads that turn into round balls of many silver-tufted fruits that disperse in the wind. These balls are usually called \"clocks\" in both British and American English. The name \"blowball\" is also used.The common dandelion grows in temperate regions of the world in lawns, and on roadsides, disturbed banks, shores of waterways, and other areas with moist soils. The common dandelion is most often considered a weed, especially in lawns and along roadsides, but the leaves, flowers, and roots are sometimes used in herbal medicine or as food.\n\n"
+      }
+    }
+  }
+}

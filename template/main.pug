@@ -1,0 +1,11 @@
+extends index.pug 
+
+block content
+    div(class="ui-wrapper")
+        div
+            button(class="upload-plant-btn") 
+                i(class="fa-solid fa-upload")
+            input(type="file" id="plantInput" name="plantFile")
+        button(id="plantButton") 
+            i(class="fa-solid fa-dragon")
+    div(class="plant-wrapper" id="plantWrapper")
