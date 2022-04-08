@@ -76,6 +76,7 @@ const xx_err_show_resume = (e = Error) => {
   };
 
   plantBtn.onclick = function () {
+    loader.removeAttribute("hidden");
     /*
         ajaxRequester('/api/v1/identify', {
             method: 'POST',
@@ -116,7 +117,6 @@ function format_data(data) {
     xx_err_show_resume(new Error("zero match"));
     return;
   }
-  console.log(data["images"][0]["url"], data);
   plant_info(plant, data["health_assessment"], data["images"][0]["url"]);
 }
 
@@ -125,7 +125,6 @@ function plant_info(
   { is_healthy, is_healthy_probability, diseases },
   img_url
 ) {
-  console.log(img_url);
   let taxonomy = plant_details.taxonomy;
   let synonyms = plant_details.synonyms;
   let structuredName = plant_details.structured_name;
@@ -187,5 +186,5 @@ function plant_info(
   `;
 
   document.getElementById("plantWrapper").innerHTML = plant_dom;
-  console.log(plant_dom);
+  spinner.setAttribute("hidden", "");
 }
