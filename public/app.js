@@ -60,6 +60,7 @@ const xx_err_show_resume = (e = Error) => {
 };
 
 (() => {
+  const loader = document.getElementById("cssLoader");
   const plantBtn = document.getElementById("plantButton");
   const plantInput = document.getElementById("plantInput");
   let base64String = "";
@@ -115,7 +116,8 @@ function format_data(data) {
     xx_err_show_resume(new Error("zero match"));
     return;
   }
-  plant_info(plant, data["health_assessment"], data["images"]["url"]);
+  console.log(data["images"][0]["url"], data);
+  plant_info(plant, data["health_assessment"], data["images"][0]["url"]);
 }
 
 function plant_info(
@@ -123,16 +125,7 @@ function plant_info(
   { is_healthy, is_healthy_probability, diseases },
   img_url
 ) {
-  console.log(
-    plant_details,
-    plant_name,
-    probability,
-    confirmed,
-    similar_images,
-    is_healthy,
-    is_healthy_probability,
-    diseases
-  );
+  console.log(img_url);
   let taxonomy = plant_details.taxonomy;
   let synonyms = plant_details.synonyms;
   let structuredName = plant_details.structured_name;

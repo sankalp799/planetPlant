@@ -89,9 +89,12 @@ PLANT-CONTENT-STYLE
   padding: 5px 3px;
 }
 
-.plant-url {
+.plant-url img {
   position: relative;
-  height: 20vh;
+  height: 50vh;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .similar-plant-urls {
@@ -141,11 +144,17 @@ RES-MEDIA
   .plant-wrapper > div {
     width: 80%;
   }
+  .plant-url img {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   * {
     font-size: 22px;
+  }
+  .plant-url img {
+    width: 95%;
   }
   .ui-wrapper {
     width: 80%;
@@ -158,5 +167,14 @@ RES-MEDIA
   }
   .plant-wrapper > div {
     width: 95%;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .plant-url img {
+    height: 30vh;
+  }
+  .plant-wrapper {
+    top: 30%;
   }
 }
