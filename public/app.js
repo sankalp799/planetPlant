@@ -186,5 +186,5 @@ function plant_info(
   `;
 
   document.getElementById("plantWrapper").innerHTML = plant_dom;
-  spinner.setAttribute("hidden", "");
+  document.getElementById("cssLoader").setAttribute("hidden", "");
 }
