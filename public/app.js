@@ -125,13 +125,18 @@ function plant_info(
   { is_healthy, is_healthy_probability, diseases },
   img_url
 ) {
+  let cnames = plant_details.common_names;
   let taxonomy = plant_details.taxonomy;
   let synonyms = plant_details.synonyms;
   let structuredName = plant_details.structured_name;
   let diseases_dom = diseases.length ? "" : "none";
   let similar_images_dom = "";
+  let cnames_dom = "";
   similar_images.forEach((sim) => {
     similar_images_dom += `<img src="${sim["url_small"]}" id="${sim["id"]}"/>`;
+  });
+  cnames.forEach((cn) => {
+    cnames_dom += cn;
   });
   diseases.forEach((d) => {
     diseases_dom += `<div>${d}</div>`;
@@ -151,6 +156,10 @@ function plant_info(
   <div>
     <div class="plant-sub-heading">Description</div>
     <div class="plant-sub-detail">${plant_details.wiki_description.value}</div>
+  </div>
+  <div>
+    <div class="plant-sub-heading">Common Names: </div>
+    <div class="plant-sub-detail">${cnames_dom}</div>
   </div>
   <div>
     <div class="plant-sub-heading">Class</div>
