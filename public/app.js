@@ -136,7 +136,7 @@ function plant_info(
     similar_images_dom += `<img src="${sim["url_small"]}" id="${sim["id"]}"/>`;
   });
   cnames.forEach((cn) => {
-    cnames_dom += cn;
+    cnames_dom += `<div>${cn}</div>`;
   });
   diseases.forEach((d) => {
     diseases_dom += `<div>${d}</div>`;
